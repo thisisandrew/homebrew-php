@@ -42,7 +42,7 @@ class AbstractPhp < Formula
     depends_on "libpng"
     depends_on "libxml2" if build.include?("with-homebrew-libxml2") || MacOS.version < :lion || MacOS.version >= :el_capitan
     depends_on "unixodbc" unless build.include?("without-unixodbc")
-    depends_on "readline"
+    #depends_on "readline" //homebrew/core has this at 8.0.0 so it just breaks PHP5.6
     depends_on "mysql" if build.include?("with-libmysql")
 
     # ssl
