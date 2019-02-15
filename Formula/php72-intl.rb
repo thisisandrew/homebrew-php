@@ -16,9 +16,7 @@ class Php72Intl < AbstractPhp72Extension
   revision 11
 
   depends_on "icu4c"
-
-  needs :cxx11
-
+  
   def install
     ENV.cxx11
     Dir.chdir "ext/intl"
